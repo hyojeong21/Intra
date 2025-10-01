@@ -1,0 +1,169 @@
+.team-card {
+  /* 1. 카드의 상하 여백을 주고 좌우 중앙 정렬을 위해 margin 수정 */
+  margin: 20px auto; 
+  padding: 20px;
+  border-radius: 16px;
+  max-width: 600px;
+  width: 100%;
+  font-family: sans-serif;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.team-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px;
+  margin: -20px -20px 0 -20px;
+  color: white;
+}
+
+.team-logo {
+  width: 150px !important;
+  height: 150px !important;
+  object-fit: contain;
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.team-info {
+  flex: 1;
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.team-info h2 {
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+}
+
+.team-info p {
+  margin: 0;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+}
+
+.rank {
+  font-weight: bold;
+  margin-top: auto; /* 순위 정보를 항상 아래쪽에 고정 */
+  padding-top: 16px; /* 소개글과의 최소 간격을 위해 추가 (원하는 값으로 조절) */
+}
+
+.recent-records {
+  margin-top: 8px;
+  font-weight: bold;
+  font-size: 15px;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: white;
+  color: black;
+}
+
+.record {
+  margin-right: 6px;
+  font-weight: bold;
+}
+
+.win { color: #0091ff; } 
+.lose { color: #ff0000; }
+.draw { color: #747474; }
+
+.match-info {
+  margin: 20px 0;
+  background: white;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.match-info-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 4px 0;
+}
+
+.match-description, .match-detail {
+  font-weight: 500;
+}
+
+.match-result {
+  font-weight: bold;
+  padding: 4px 0px;
+  font-size: 1rem;
+}
+
+.section-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #eee;
+}
+
+.team-members, .team-results {
+  margin-top: 16px;
+  font-size: 14px;
+}
+
+.member.header, .result-header {
+  font-weight: bold;
+  background: #f7f7f7;
+  border-radius: 8px;
+  padding: 8px 10px;
+  display: grid;
+  gap: 8px;
+}
+
+.member, .result-row {
+  background: white;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+  margin-top: 6px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  align-items: center;
+  display: grid;
+  gap: 8px;
+}
+
+/* 2. 팀 명단 테이블의 텍스트를 중앙 정렬하기 위해 text-align 추가 */
+.member.header, .member {
+  grid-template-columns: 1fr 1fr 1.5fr 1fr;
+  text-align: center;
+}
+
+.result-header, .result-row {
+  grid-template-columns: 1.5fr 1fr 1.5fr 1fr 0.5fr;
+  text-align: center;
+}
+
+.result-row {
+  font-weight: normal;
+}
+
+.result-badge {
+  padding: 4px 6px;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 0.85em;
+  text-align: center;
+}
+
+.result-badge.win { color: blue; background-color: #e6f7ff; }
+.result-badge.lose { color: red; background-color: #fff1f0; }
+.result-badge.draw { color: gray; background-color: #fafafa; }

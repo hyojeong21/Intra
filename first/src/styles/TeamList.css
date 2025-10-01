@@ -1,0 +1,78 @@
+.team-list-page {
+  min-height: 100vh;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  box-sizing: border-box;
+}
+
+/* --- 종목 선택 바 스타일 --- */
+.category-bar {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 8px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #e5e7eb;
+  width: 100%;
+  justify-content: center;
+}
+
+.category-button {
+  background: none;
+  border: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 8px 16px;
+  color: #6b7280;
+  border-bottom: 3px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.category-button:hover {
+  color: #111827;
+}
+
+.category-button.active {
+  font-weight: 700;
+  color: #111827;
+  border-bottom-color: #111827;
+}
+
+/* --- 팀 선택 버튼 리스트 스타일 --- */
+.team-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  padding: 0 16px;
+}
+
+.team-button {
+  padding: 8px 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background-color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.team-button:hover {
+  background-color: #f3f4f6;
+  border-color: #9ca3af;
+}
+
+.team-button.selected {
+  font-weight: 700;
+  color: white;
+  background-color: #374151;
+  border-color: #1f2937;
+}
+
+/* --- 선택된 팀 카드 표시 영역 --- */
+.team-display {
+  width: 100%;
+}
